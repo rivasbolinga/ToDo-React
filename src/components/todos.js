@@ -1,7 +1,29 @@
-const TodoItem = ({item}) => {
+const TodoList = ({todos,setTodos}) => {
+  const [todos, setTodos] = useState([
+    {
+      id: 1,
+      title: 'Setup development environment',
+      completed: true,
+    },
+    {
+      id: 2,
+      title: 'Develop website and add content',
+      completed: false,
+    },
+    {
+      id: 3,
+      title: 'Deploy to live server',
+      completed: false,
+    },
+  ]);
   return (
-    <li>
-      <input type='checkbox'></input>
-    </li>
+    <ul>
+      {todos.map((todo) => (
+        <li className ="todo-list">{todo.title}</li>      
+      ))}
+    </ul>
+   
   )
 }
+
+export default TodoItem;

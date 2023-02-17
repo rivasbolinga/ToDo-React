@@ -4,16 +4,11 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 import 'bootstrap/dist/css/bootstrap.min.css'
-import Navbar from './components/Navbar.js';
-import Title from './components/title.js'
-import Form from './components/form.js'
+
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <App />
-    <Navbar />
-    <Title />
-    <Form />
+   <App />
   </React.StrictMode>
 );
 
