@@ -9,6 +9,7 @@ function App() {
   // keep track input from the euser
   const [todos, setTodos] = useState([]);
   // keep track from the list.
+  const [editTodo, setEditTodo] = useState(null);
   return (
     <>
       <Navbar />
@@ -17,7 +18,11 @@ function App() {
         todos={todos}
         setTodos={setTodos}
       />
-      <TodoList todos={todos} setTodos={setTodos} />
+      <TodoList
+        todos={todos}
+        setTodos={setTodos}
+        setEditTodo={setEditTodo}
+      />
     </>
 
   );
