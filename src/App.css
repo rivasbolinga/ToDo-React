@@ -6,6 +6,7 @@
 
 body {
   background: linear-gradient(112.1deg, rgb(32, 38, 57) 11.4%, rgb(63, 76, 119) 70.2%);
+  height: 1000px;
 }
 
 .body {
@@ -73,7 +74,8 @@ input {
 }
 @media only screen and (min-width: 768px){
   .main-container {
-    width: 400px;
-    min-height: 600px;
+    margin-top: 90px;
+    width: 500px;
+    height: 700px;
   }
 }
