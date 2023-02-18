@@ -77,7 +77,7 @@ alt="logo" width="140"  height="auto"  />
 
 ## 🚀 Live Demo <a name="live-demo"></a>
 
-You can have a Live Demo: https://rivasbolinga.github.io/React-Math-magicians/
+You can have a Live Demo: (https://rivasbolinga.github.io/ToDo-React/)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
