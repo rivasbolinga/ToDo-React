@@ -1,5 +1,5 @@
 const Navbar = () => (
-  <nav className="navbar navbar-dark bg-dark">
+  <nav className="navbar bg-body-tertiary">
     <span className="navbar-brand mb-0 h1">TO DO APP //</span>
   </nav>
 

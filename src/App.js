@@ -12,17 +12,24 @@ function App() {
   const [editTodo, setEditTodo] = useState(null);
   return (
     <>
-      <Navbar />
-      <Title />
-      <Form
-        todos={todos}
-        setTodos={setTodos}
-      />
-      <TodoList
-        todos={todos}
-        setTodos={setTodos}
-        setEditTodo={setEditTodo}
-      />
+      <Navbar className="navbar" />
+      <div className="body">
+        <div className="main-container">
+          <Title />
+          <Form
+            todos={todos}
+            setTodos={setTodos}
+          />
+          <div className="todo-list">
+            <TodoList
+              className="todo-item"
+              todos={todos}
+              setTodos={setTodos}
+              setEditTodo={setEditTodo}
+            />
+          </div>
+        </div>
+      </div>
     </>
 
   );
