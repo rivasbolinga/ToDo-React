@@ -55,13 +55,14 @@ const TodoList = ({ todos, setTodos }) => {
   return (
     <ul>
       {todos.map((todo) => (
-        <li className="todo-list" key={todo.id}>
+        <li className="todo-item" key={todo.id}>
           <input
             className="checkbox"
             type="checkbox"
             onChange={() => handleComplete(todo)}
           />
           <input
+            className="todo-input"
             type="text"
             value={todo.title}
             onChange={(e) => handleInputChange(e, todo.id)}
