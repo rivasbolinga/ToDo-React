@@ -19,7 +19,7 @@ body {
   background: linear-gradient(to right, rgb(242, 112, 156), rgb(255, 148, 114));
   border-radius: 30px;
   border: #000;
-  height: 500px;
+  min-height: 500px;
   box-shadow: 0 4px 4px rgba(255, 255, 255, 0.551);
   display: flex;
   flex-direction: column;
@@ -67,7 +67,13 @@ input {
 }
 
 .navbar {
-  background-color: white;
+  background-color: rgba(255, 255, 255, 0.868);
   width: 100%;
   border-bottom: 1px solid grey;
+}
+@media only screen and (min-width: 768px){
+  .main-container {
+    width: 400px;
+    min-height: 600px;
+  }
 }

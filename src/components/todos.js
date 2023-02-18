@@ -2,7 +2,30 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { Trash, PencilSquare } from 'react-bootstrap-icons';
 
-const TodoList = ({ todos, setTodos, setEditTodo }) => {
+const TodoList = ({ todos, setTodos }) => {
+  const handleDelete = (id) => {
+    const newTodos = todos.filter((todo) => todo.id !== id);
+    setTodos(newTodos);
+  };
+  // -- Create new array with property completed as true.
+  const handleComplete = (todo) => {
+    setTodos(todos.map((item) => {
+      if (item.id === todo.id) {
+        return { ...item, completed: !item.completed };
+      }
+      return item;
+    }));
+  };
+  // -- Set a new property for editing to change the input field readOnly to false.
+  const handleEdit = (id) => {
+    const newTodos = todos.map((todo) => {
+      if (todo.id === id) {
+        return { ...todo, editing: true };
+      }
+      return { ...todo, editing: false };
+    });
+    setTodos(newTodos);
+  };
   const handleInputChange = (e, id) => {
     const newTodos = todos.map((todo) => {
       if (todo.id === id) {
@@ -13,22 +36,20 @@ const TodoList = ({ todos, setTodos, setEditTodo }) => {
     setTodos(newTodos);
   };
 
-  const handleDelete = (id) => {
-    const newTodos = todos.filter((todo) => todo.id !== id);
+  const handleBlur = (id) => {
+    const newTodos = todos.map((todo) => {
+      if (todo.id === id) {
+        return { ...todo, editing: false };
+      }
+      return todo;
+    });
     setTodos(newTodos);
   };
 
-  const handleComplete = (todo) => {
-    setTodos(todos.map((item) => {
-      if (item.id === todo.id) {
-        return { ...item, completed: !item.completed };
-      }
-      return item;
-    }));
-  };
-  const handleEdit = ({ id }) => {
-    const findTodo = todos.find((todo) => todo.id === id);
-    setEditTodo(findTodo);
+  const handleKeyDown = (e, id) => {
+    if (e.key === 'Enter') {
+      handleBlur(id);
+    }
   };
 
   return (
@@ -44,6 +65,10 @@ const TodoList = ({ todos, setTodos, setEditTodo }) => {
             type="text"
             value={todo.title}
             onChange={(e) => handleInputChange(e, todo.id)}
+            readOnly={!todo.editing}
+            onBlur={() => handleBlur(todo.id)}
+            onKeyDown={(e) => handleKeyDown(e, todo.id)}
+            style={{ textDecoration: todo.completed ? 'line-through' : 'none' }}
           />
           <button
             type="button"
@@ -64,6 +89,5 @@ const TodoList = ({ todos, setTodos, setEditTodo }) => {
 TodoList.propTypes = {
   todos: PropTypes.arrayOf.isRequired,
   setTodos: PropTypes.func.isRequired,
-  setEditTodo: PropTypes.func.isRequired,
 };
 export default TodoList;
