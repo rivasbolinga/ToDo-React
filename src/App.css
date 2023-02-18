@@ -72,7 +72,8 @@ input {
   width: 100%;
   border-bottom: 1px solid grey;
 }
-@media only screen and (min-width: 768px){
+
+@media only screen and (min-width: 768px) {
   .main-container {
     margin-top: 90px;
     width: 500px;
@@ -93,5 +94,4 @@ input {
     border-radius: 7px;
     width: 360px;
   }
- 
 }
