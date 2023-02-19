@@ -1,6 +1,5 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { Trash, PencilSquare } from 'react-bootstrap-icons';
 
 const TodoList = ({ todos, setTodos }) => {
   const handleDelete = (id) => {
@@ -76,10 +75,14 @@ const TodoList = ({ todos, setTodos }) => {
             className="button-edit"
             onClick={() => handleEdit(todo.id)}
           >
-            <PencilSquare />
+            <i className="fa-regular fa-pen-to-square" />
           </button>
-          <button type="button" className="button-delete">
-            <Trash onClick={() => handleDelete(todo.id)} />
+          <button
+            type="button"
+            className="button-delete"
+            onClick={() => handleDelete(todo.id)}
+          >
+            <i className="fa-regular fa-trash-can" />
           </button>
         </li>
       ))}

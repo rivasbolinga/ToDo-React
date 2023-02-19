@@ -62,6 +62,11 @@ button {
   background: none;
 }
 
+.button-delete {
+  margin-left: 5px;
+  color: rgb(115, 3, 3);
+}
+
 input {
   background: none;
   border: none;
