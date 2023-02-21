@@ -21,11 +21,12 @@ const Form = ({ todos, setTodos }) => {
           value={input}
           required
           onChange={(e) => setInput(e.target.value)}
+          maxLength="28"
         />
+        <button type="submit" className="btn btn-outline-dark">
+          Add
+        </button>
       </div>
-      <button type="submit" className="btn btn-primary">
-        Submit
-      </button>
     </form>
   );
 };

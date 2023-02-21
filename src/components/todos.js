@@ -2,34 +2,94 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 const TodoList = ({ todos, setTodos }) => {
-  // Update the title of the todo object in todo state.
+  const handleDelete = (id) => {
+    const newTodos = todos.filter((todo) => todo.id !== id);
+    setTodos(newTodos);
+  };
+  // -- Create new array with property completed as true.
+  const handleComplete = (todo) => {
+    setTodos(todos.map((item) => {
+      if (item.id === todo.id) {
+        return { ...item, completed: !item.completed };
+      }
+      return item;
+    }));
+  };
+  // -- Set a new property for editing to change the input field readOnly to false.
+  const handleEdit = (id) => {
+    const newTodos = todos.map((todo) => {
+      if (todo.id === id) {
+        return { ...todo, editing: true };
+      }
+      return { ...todo, editing: false };
+    });
+    setTodos(newTodos);
+  };
   const handleInputChange = (e, id) => {
     const newTodos = todos.map((todo) => {
-      // Using map to create a new array of todos.
       if (todo.id === id) {
         return { ...todo, title: e.target.value };
-        // is id matches we return a new todo object with same
-        // id and a new title based on the todo object.
       }
       return todo;
     });
     setTodos(newTodos);
   };
+
+  const handleBlur = (id) => {
+    const newTodos = todos.map((todo) => {
+      if (todo.id === id) {
+        return { ...todo, editing: false };
+      }
+      return todo;
+    });
+    setTodos(newTodos);
+  };
+
+  const handleKeyDown = (e, id) => {
+    if (e.key === 'Enter') {
+      handleBlur(id);
+    }
+  };
+
   return (
     <ul>
       {todos.map((todo) => (
-        <li className="todo-list" key={todo.id}>
+        <li className="todo-item" key={todo.id}>
           <input
+            className="checkbox"
+            type="checkbox"
+            onChange={() => handleComplete(todo)}
+          />
+          <input
+            className="todo-input"
             type="text"
             value={todo.title}
             onChange={(e) => handleInputChange(e, todo.id)}
+            readOnly={!todo.editing}
+            onBlur={() => handleBlur(todo.id)}
+            onKeyDown={(e) => handleKeyDown(e, todo.id)}
+            style={{ textDecoration: todo.completed ? 'line-through' : 'none' }}
           />
+          <button
+            type="button"
+            className="button-edit"
+            onClick={() => handleEdit(todo.id)}
+          >
+            <i className="fa-regular fa-pen-to-square" />
+          </button>
+          <button
+            type="button"
+            className="button-delete"
+            onClick={() => handleDelete(todo.id)}
+          >
+            <i className="fa-regular fa-trash-can" />
+          </button>
         </li>
       ))}
     </ul>
-
   );
 };
+
 TodoList.propTypes = {
   todos: PropTypes.arrayOf.isRequired,
   setTodos: PropTypes.func.isRequired,

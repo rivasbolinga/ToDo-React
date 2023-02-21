@@ -1,39 +1,102 @@
-.App {
-  text-align: center;
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+body {
+  background: linear-gradient(112.1deg, rgb(32, 38, 57) 11.4%, rgb(63, 76, 119) 70.2%);
+  height: 1000px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.body {
+  display: flex;
+  justify-content: center;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.main-container {
+  margin-top: 40px;
+  width: 300px;
+  background: linear-gradient(to right, rgb(242, 112, 156), rgb(255, 148, 114));
+  border-radius: 30px;
+  border: #000;
+  min-height: 500px;
+  box-shadow: 0 4px 4px rgba(255, 255, 255, 0.551);
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  font-family: 'Raleway', sans-serif;
 }
 
-.App-link {
-  color: #61dafb;
+.title-text {
+  margin-top: 40px;
+  font-size: 40px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.form-group {
+  margin-top: 20px;
+  display: flex;
+  gap: 10px;
+}
+
+.form-control {
+  background: none;
+  border: 0.5px solid grey;
+}
+
+.todo-list {
+  margin-top: 20px;
+  background-color: rgba(255, 255, 255, 0.192);
+  list-style: none;
+  padding: 0;
+  border-radius: 20px;
+}
+
+.todo-item {
+  padding: 0;
+  list-style: none;
+}
+
+button {
+  border: none;
+  background: none;
+}
+
+.button-delete {
+  margin-left: 5px;
+  color: rgb(115, 3, 3);
+}
+
+input {
+  background: none;
+  border: none;
+}
+
+.navbar {
+  background-color: rgba(255, 255, 255, 0.868);
+  width: 100%;
+  border-bottom: 1px solid grey;
+}
+
+@media only screen and (min-width: 768px) {
+  .main-container {
+    margin-top: 90px;
+    width: 500px;
+    height: 700px;
   }
 
-  to {
-    transform: rotate(360deg);
+  .todo-list {
+    width: 400px;
+    padding-top: 20px;
+  }
+
+  .todo-input {
+    width: 300px;
+  }
+
+  .todo-item:nth-child(even) {
+    background-color: rgba(255, 255, 255, 0.424);
+    border-radius: 7px;
+    width: 360px;
   }
 }

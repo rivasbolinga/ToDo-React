@@ -11,13 +11,23 @@ function App() {
   // keep track from the list.
   return (
     <>
-      <Navbar />
-      <Title />
-      <Form
-        todos={todos}
-        setTodos={setTodos}
-      />
-      <TodoList todos={todos} setTodos={setTodos} />
+      <Navbar className="navbar" />
+      <div className="body">
+        <div className="main-container">
+          <Title />
+          <Form
+            todos={todos}
+            setTodos={setTodos}
+          />
+          <div className="todo-list">
+            <TodoList
+              className="todo-item"
+              todos={todos}
+              setTodos={setTodos}
+            />
+          </div>
+        </div>
+      </div>
     </>
 
   );
