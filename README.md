@@ -44,7 +44,6 @@ alt="logo" width="140"  height="auto"  />
   - [Run tests](#run-tests)
 - [👥 Authors](#authors)
 - [🔭 Future Features](#future-features)
-- [🤝 Contributing](#contributing)
 - [⭐️ Show your support](#support)
 - [🙏 Acknowledgements](#acknowledgements)
 - [📝 License](#license)
@@ -147,9 +146,8 @@ npx stylelint "**/*.{css,scss}"
 
 ```
 npx eslint "**/*.{js,jsx}"
-
 ```
-###  Run test linters:
+
 
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
