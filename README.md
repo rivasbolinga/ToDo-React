@@ -5,7 +5,7 @@ alt="logo" width="140"  height="auto"  />
 
 
 
-# 📖 [TO DO LIST - With React] <a name="about-project"></a>
+# 📖 TO DO LIST - With React <a name="about-project"></a>
 
   <img width="1440" alt="Screenshot 2023-02-18 at 19 01 08" src="https://user-images.githubusercontent.com/103900838/219881288-d432e310-1165-4925-8a10-5e36f42f7217.png">
 
@@ -25,7 +25,7 @@ alt="logo" width="140"  height="auto"  />
  <a name="about-project"></a>
  
 <!-- PROJECT DESCRIPTION -->
-**[To do List ]** is a website built with React where the user can keep track of the task needs to do, includes the functionality of deleting, mark as completed and editing a task.
+**To do List** is a website built with React where the user can keep track of the task needs to do, includes the functionality of deleting, mark as completed and editing a task.
 
 <!-- TABLE OF CONTENTS -->
 
@@ -42,7 +42,6 @@ alt="logo" width="140"  height="auto"  />
   - [Install](#install)
   - [Usage](#usage)
   - [Run tests](#run-tests)
-  - [Deployment](#triangular_flag_on_post-deployment)
 - [👥 Authors](#authors)
 - [🔭 Future Features](#future-features)
 - [🤝 Contributing](#contributing)
@@ -58,17 +57,17 @@ alt="logo" width="140"  height="auto"  />
 <a href="https://www.w3.org/html/" target="_blank"><img align="center" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/html5/html5-original-wordmark.svg" alt="html5" width="55" height="55"/></a><a href="https://www.w3schools.com/css/" target="_blank"><img align="center" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/css3/css3-original-wordmark.svg" alt="css3" width="55" height="55"/></a>
 <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript" target="_blank" rel="noreferrer"><img align="center" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/javascript/javascript-original.svg" alt="javascript" width="55" height="55"/></a>
 <a href="https://reactjs.org/" target="_blank" rel="noreferrer">
-<img align="center" src="https://raw.githubusercontent.com/reactjs/reactjs.org/main/src/icons/logo.svg" alt="react" width="60" height="60"/></a>
+<img align="center" src="https://cdn-icons-png.flaticon.com/512/1183/1183672.png" alt="react" width="60" height="60"/></a>
 
 <!-- Features -->
 ### Key Features <a name="key-features"></a>
 
 <!-- > Describe between 1-3 key features of the application.-->
-- [ ] **[Totally responsive]**
-- [ ] **[Add a to do]**
-- [ ] **[Delete a todo]**
-- [ ] **[Mark a todo as completed]**
-- [ ] **[Edit a todo]**
+- [ ] **Totally responsive**
+- [ ] **Add a to do**
+- [ ] **Delete a todo**
+- [ ] **Mark a todo as completed**
+- [ ] **Edit a todo**
 
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
@@ -77,7 +76,7 @@ alt="logo" width="140"  height="auto"  />
 
 ## 🚀 Live Demo <a name="live-demo"></a>
 
-You can have a Live Demo: (https://rivasbolinga.github.io/ToDo-React/)
+Live Demo 👉🏼 [here](https://rivasbolinga.github.io/ToDo-React/)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -85,9 +84,10 @@ You can have a Live Demo: (https://rivasbolinga.github.io/ToDo-React/)
 
 ## 💻 Getting Started <a name="getting-started"></a>
 
-
-
 To get a local copy up and running, follow these steps.
+
+
+<!-- PREREQUISITES -->
 
 ### Prerequisites
 
@@ -99,6 +99,8 @@ In order to run this project you need:
 - [ ] Webpack installed
 - [ ] Knowledge of some basic Git commands
 
+<!-- SETUP -->
+
 ### Setup
 
 - [ ] Link your PC to GitHub
@@ -106,30 +108,36 @@ In order to run this project you need:
 
 
 ```
-
 git clone https://github.com/rivasbolinga/ToDo-React.git
 ```
 
-
 - [ ] Open the file in your code editor
+  
+<!-- INSTALL -->
 
+### Install
 
+Install this project with:
 
-
-###  Create React App:
-
-Run these commands:
-- [ ] `npx create-react-app my-app`
-- [ ] `cd my-app`
-- [ ] `npm start`
-
+```
+npm install
+```
 
 ###  Instal linters for React and Redux:
 
 Here the link to install your linters: https://github.com/microverseinc/linters-config
 
+<!-- USAGE -->
 
-###  Run test linters:
+### Usage
+To run the project, execute the following command:
+
+```
+npm start
+```
+<!-- RUN TESTS -->
+
+###  Run tests
 
 To run Stylelint and ESLint tests, run the following commands respectively:
 
@@ -143,37 +151,6 @@ npx eslint "**/*.{js,jsx}"
 ```
 ###  Run test linters:
 
-**To deploy this project  with react:**
-
-1.Install gh-pages:
-
-```
-npm i gh-pages
-```
-2. Change package JSON, 
-
--adding inside "scrpits":
-
-```
-   "predeploy": "npm run build",
-    "deploy": "gh-pages -d build"
-```
--adding a homepage:
-
-```
-  "homepage": "https://rivasbolinga.github.io/",
-```
-3. Update:
-
-```
-npm run build
-```
-
-4. Finally, deploy:
-
-```
-npm run deploy
-```
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -195,8 +172,8 @@ npm run deploy
 ## 🔭 Future Features <a name="future-features"></a>
 
 
-- [ ] **[Save your todos in local Storage]**
-- [ ] **[Different sections through the nav bar]**
+- [ ] **Save your todos in local Storage**
+- [ ] **Different sections through the nav bar**
 
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
