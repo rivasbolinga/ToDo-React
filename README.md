@@ -36,7 +36,7 @@ alt="logo" width="140"  height="auto"  />
     - [Tech Stack](#tech-stack)
     - [Key Features](#key-features)
   - [🚀 Live Demo](#live-demo)
-- [💻 Getting Started](#getting-started)
+  - [💻 Getting Started](#getting-started)
   - [Setup](#setup)
   - [Prerequisites](#prerequisites)
   - [Install](#install)
@@ -45,7 +45,6 @@ alt="logo" width="140"  height="auto"  />
 - [👥 Authors](#authors)
 - [🔭 Future Features](#future-features)
 - [⭐️ Show your support](#support)
-- [🙏 Acknowledgements](#acknowledgements)
 - [📝 License](#license)
 </div>
 
